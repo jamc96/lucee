@@ -26,8 +26,10 @@ class lucee::config {
   # create files
   if $lucee::source_installer {
     file { '/tmp/lucee.run':
-      mode    => '0775',
       source  => $lucee::source_installer,
+      mode    => '0775',
+      owner   => 'lucee',
+      group   => 'lucee',
       require => File[$lucee::home_dir_path],
     }
   }
