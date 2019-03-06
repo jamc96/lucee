@@ -1,0 +1,7 @@
+---
+lucee::home_dir_path: '/opt/lucee'
+lucee::web_dir_path: '/opt/lucee/tomcat'
+lucee::logs_dir_path: '/opt/lucee/tomcat/logs'
+lucee::package_ensure: 'present'
+lucee::config_ensure: 'present'
+lucee::source_installer: ~

@@ -5,12 +5,12 @@
 # @example
 #   include lucee
 class lucee(
-  String $home_dir_path              = '/opt/lucee',
-  String $web_dir_path               = '/opt/lucee/tomcat',
-  String $logs_dir_path              = '/opt/lucee/tomcat/logs',
-  String $package_ensure             = 'present',
-  String $config_ensure              = 'present',
-  Optional[String] $source_installer = undef,
+  String $home_dir_path,
+  String $web_dir_path,
+  String $logs_dir_path,
+  String $package_ensure,
+  String $config_ensure,
+  Optional[String] $source_installer,
 ) {
   # class containment
   include ::lucee::install
